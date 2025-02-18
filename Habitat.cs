@@ -1,4 +1,4 @@
-namespace Zoo{
+namespace Zoologico{
     public class Habitat{
         public string Name { get; set; }
         public int Capacity { get; set; }
