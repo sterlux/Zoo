@@ -10,6 +10,8 @@ while(true){
     Console.WriteLine("[2] Ver la informacion del zoologico");
     Console.WriteLine("[3] Agregar habitat");
     Console.WriteLine("[4] Remover habitat");
+    Console.WriteLine("[5] Alimentar");
+    
 
     option= Convert.ToInt32(Console.ReadLine());
 
@@ -21,13 +23,24 @@ while(true){
         case 2: zoo.PrintInfo();
         break;
 
-        case 3: AddHabitat();
+        case 3: AddHabitatN();
         break; 
+
+        case 4: RemoveHabitatN();
+        break;
+
+        case 5: zoo.FeedHabitat();
+        break;
+
+
+        default: 
+        Console.WriteLine ("Opcion incorrecta");
+        break;
 
 
     }
 }
-void AddHabitat(){
+void AddHabitatN(){
     Habitat Newhome = new Habitat();
     Console.WriteLine("Nombre del Habitat:");
     Newhome.Name= Console.ReadLine();
@@ -55,6 +68,19 @@ void AddHabitat(){
         newstinky.Weight= Convert.ToDouble(Console.ReadLine());
         newstinky.Type = Newhome.Type;
         newstinky.IsHungry = true;
+
+        Newhome.Stinkys.Add(newstinky);
     }
 
+    zoo.AddHabitat(Newhome);
+
+}
+void RemoveHabitatN () {
+    int i=1;
+    foreach (Habitat habitat in zoo.Habitats){
+        Console.WriteLine ($"{i}: {habitat.Name}");
+    }
+    Console.WriteLine ("Habitat a eliminar:");
+      var habitatName = Console.ReadLine ();
+      zoo.RemoveHabitat(habitatName);
 }

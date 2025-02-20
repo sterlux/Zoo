@@ -12,5 +12,10 @@ namespace Zoologico{
 
         public bool IsHungry { get ; set ;}
         
+       public void refill (){
+        IsHungry = false;
+        Console.WriteLine ($"{Name} ya devorò");
+       }
+
     }
 }
