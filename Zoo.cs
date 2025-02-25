@@ -19,15 +19,15 @@ namespace Zoologico{
 
         public void PrintInfo (){
             foreach (var habitat in Habitats){
-                Console.WriteLine($"{habitat.Name}");
-                Console.WriteLine($"{habitat.Capacity}");
-                Console.WriteLine($"{habitat.Type}");
+                Console.WriteLine($"Habitat: {habitat.Name}");
+                Console.WriteLine($"Capacidad: {habitat.Capacity}");
+                Console.WriteLine($"Tipo de Animales: {habitat.Type}");
              foreach (var animal in habitat.Stinkys){
-                Console.WriteLine($"{animal.Name}");
-                Console.WriteLine($"{animal.Age}");
-                Console.WriteLine($"{animal.Weight}");
-                Console.WriteLine($"{animal.Type}");
-                Console.WriteLine($"{animal.IsHungry}");
+                Console.WriteLine($"Nombre Animal: {animal.Name}");
+                Console.WriteLine($"Edad: {animal.Age}");
+                Console.WriteLine($"Peso: {animal.Weight}");
+                Console.WriteLine($"Tipo: {animal.Type}");
+                Console.WriteLine($"Tiene hambre? {animal.IsHungry}");
              }   
 
             }
