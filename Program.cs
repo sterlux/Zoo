@@ -40,6 +40,9 @@ while(true){
 
     }
 }
+
+// Todos estos metodos son solamente del Program, y los usamos para tener 
+// El codigo mas limpio y no tener toda la logica en el Switch de arriba
 void AddHabitatN(){
     Habitat Newhome = new Habitat();
     Console.WriteLine("Nombre del Habitat:");

@@ -6,14 +6,19 @@ namespace Zoologico{
             Habitats = new List<Habitat>();
         }
 
+        // Recibimos un nuevo objeto como parametro
         public void AddHabitat (Habitat newHabitat){
+            // La lista tiene el metodo Add y recibe el nuevo objeto
             Habitats.Add(newHabitat);
 
         }
 
+        // Este metodo no necesita regresar nada, 
+        // solamente borra el habitat que encuentra por su nombre
         public void RemoveHabitat (string name){
-            Habitat byehabitat = Habitats.First(h => h.Name == name);
-            Habitats.Remove(byehabitat);
+            // buscamos el habitat que el nombre sea = al que recibimos como parametro
+            Habitat byehabitat = Habitats.First(h => h.Name == name); // lo guardamos en byehabitat
+            Habitats.Remove(byehabitat); // la misma lista tiene el metodo remove y le mandamos el habitat que encontramos
             
         }
 
